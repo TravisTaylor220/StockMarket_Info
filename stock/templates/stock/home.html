@@ -1,0 +1,36 @@
+<!--Created by Travis Taylor-->
+
+{%extends "stock/base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author }} on  {{ post.date }}</p>
+        <p>{{ post.content }} </p>
+        <p>Current Price: {{ post.price }}</p>
+    {% endfor %}
+    <div class="intro">
+      <h1>Welcome to Smart Money!</h1>
+      <br>
+      <h6>Smart money is a great way to learn and improve on your future investment success!</h6>
+      <h6>You can head over to our Learn tab to get started with our top 5 resource picks</h6>
+      <h6>You can choose a stock option from the ticker menu below to see their data!</h6>
+      <br>
+      <h6>Get started by choosing a stock from the ticker menu below!</h6>
+      <br>
+      <br>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <h4>Select Company Ticker Symbol:</h4>
+            <form class="form" action="" method="POST" style="width:100%;">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <input type="submit" class="btn btn-success" value="Submit"/>
+            </form>
+          </div>
+        </div>
+      </div>
+{% endblock content %}

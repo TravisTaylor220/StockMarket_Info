@@ -1,0 +1,128 @@
+/*Created by Idrees Khan/Travis Taylor*/
+
+body {
+    background: #fafafa;
+    color: #000000;
+    margin-top: 8rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+  .bg-steel {
+    background-color: #5f5f5f;
+  }
+  
+  .site-header .navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-left: 3.4rem;
+    margin-right: 3.4rem;
+    font-size: 3rem;
+}
+  .intro {
+    text-align: center;
+  }
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+    margin-right: 3.4rem;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #7495b9;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+
+  .ticker-title {
+    background-color: #00ADB4;
+    min-height:70px!important;
+    justify-items: center;
+    grid-area: head;
+}
+
+
+.box{
+    width: 24.4%!important;
+    box-shadow: 5px 5px 5px gray;
+    margin: 45px;
+    min-height: 150px!important;
+    background-color: #ffffff;
+}
+
+.box-heading{
+    background-color: #00ADB4;
+    color:black;
+    text-align: center;
+}
+
+.box-heading h5{
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.box-heading h3{
+  font-size: 28px;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.box-details{
+    background-color: #ffffff;
+}
+
+.box-details h2{
+    font-size: 20px;
+    color: darkslategrey;
+}
+
+#title {
+    font-size: 36px;
+    line-height: 70px;
+    text-align: center;
+    font-family: 'Georgia';
+}
+
+#link_back {
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    font-family: 'Georgia';
+}
+
+.col-sm-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}

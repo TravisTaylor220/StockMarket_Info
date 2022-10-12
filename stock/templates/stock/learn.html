@@ -1,0 +1,18 @@
+<!--Created by Travis Taylor-->
+
+{%extends "stock/base.html" %}
+{% load static %}
+
+{% block title %}
+
+{% endblock title %}
+{% block content %}
+    <h2>Below is a list of our top picks for new investors to get started!</h2>
+    <br>
+    {% for post in posts %}
+    <h3>{{ post.author }}</h3>
+    <p>Our {{ post.number }} pick for new investors: <strong>{{ post.title }}</strong></p>
+    <p>{{ post.content }} </p>
+    <p>Visit <a href="{{ post.price }}">{{ post.price }}</a></p>
+{% endfor %}
+{% endblock content %}

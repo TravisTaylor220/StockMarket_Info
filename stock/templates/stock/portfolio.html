@@ -1,0 +1,153 @@
+<!--Created by Idrees Khan/Travis Taylor-->
+
+{%extends "stock/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <h1>{{ post.title}}:</h1>
+        <p>{{ post.content }} </p>
+        <p>Current Price: {{ post.price }}</p>
+        <h1>{{ post.title2}}:</h1>
+        <p>{{ post.content }} </p>
+        <p>Predicted Price: {{ post.price2 }}</p>
+    {% endfor %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 ticker-title" style="float: none!important;">
+                <h1 id="title" class="text">Information For {{ name }}</h1>
+            </div>
+            <div class="col-sm-12" style="float: none!important;">
+                <h4 class="text"><strong>Sector :  </strong>{{ sector }}</h4>
+                <h4 class="text"><strong>Employees :  </strong>{{ employees }}</h4>
+                <p><strong>Summary : </strong> {{ description }}</p>
+            </div>
+        </div>
+    
+        <div class="row">
+            <!--Value Ratio Details Box-->
+            <div class="col-sm-3 box">
+                <div class="row">
+                    <div class="col-sm-12 box-heading">
+                        <h5>Value Ratio Details</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 box-details table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Open</th>
+                                    <th>PEG Ratio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>${{ open }}</td>
+                                    <td>{{ pegratio }}</td>
+                                </tr>
+                            </tbody>   
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!--Bid Price Details Box-->
+            <div class="col-sm-3 box">
+                <div class="row">
+                    <div class="col-sm-12 box-heading">
+                        <h5>Bid Details</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 box-details table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Bid</th>
+                                    <th>Ask</th>
+                                    <th>Spread</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>${{ bid }}</td>
+                                    <td>${{ ask }}</td>
+                                    <td>${{ spread }}</td>
+                                </tr>
+                            </tbody>   
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Earnings and Revenue Details Box-->
+            <div class="col-sm-3 box">
+                <div class="row">
+                    <div class="col-sm-12 box-heading">
+                        <h5>Revenue Details</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-13 box-details table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>YTD Revenue</th>
+                                    <th>YTD Earnings</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>${{ revenue }}</td>
+                                    <td>${{ earnings }}</td>
+                                </tr>
+                            </tbody>   
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!--Share holder Details Box-->
+           
+    
+            <!--Candlestick chart Box-->
+            <div class="col-sm-12" style="margin-top:20px;">
+                <div class="row">
+                    <div class="col-sm-12 box-heading">
+                        <h3>CandleStick Chart</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 box-details">
+                        {% if graph %}
+                        <div style="width:600;height:500">  
+                            {{ graph|safe }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+    
+            <!--linechart chart Box-->
+            <div class="col-sm-12" style="margin-top:20px;">
+                <div class="row">
+                    <div class="col-sm-12 box-heading">
+                        <h3>Price Trend</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 box-details">
+                        {% if linegraph %}
+                        <div style="width:600;height:500">
+                            {{ linegraph|safe }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
